@@ -1,0 +1,48 @@
+# A constant amount of time is required to execute each line of code; 
+# however, each line may take a different amount of time to execute.
+# In order to understand the running time required for an algorithm,
+# consider the below code as an example:
+
+
+
+
+if n==0 || n == 3 :             #constant time
+  print("data")
+else:
+  for i in range(             #loop run for n times
+     print("structure")
+
+# Here, in statement 1 of the above example, 
+# if the condition is true then "data" will be printed,
+# and if the condition is not true then the for loop will execute n times.
+# The time required by the algorithm depends on the time required for each statement,
+# and how many times a statement is executed. 
+# The running time of the algorithm is the sum of time required by all the statements. 
+# For the above code, assume statement 1 takes c1 amount of time, statement 2 takes c2 amount of time, and so on.
+# So, if the ith statement takes a constant amount of time ci and if the ith statement is executed n times,
+# then it will take cin time.
+# The total running time T(n) of the algorithm for a given value of n (assuming the value of n is not zero or three) will be as follows.
+
+T(n) = c1 + c3 + c4 x n + c5 x n
+
+If the value of n is equal to zero or three, then the time required by the algorithm will be as follows.
+
+T(n) = c1 + c2
+
+Therefore, the running time required for an algorithm also depends upon what input is given in addition to the size of the input given. 
+For the given example, the best case will be when the input is either zero or three, and in that case, the running time of the algorithm will be constant.
+In the worst case, the value of n is not equal to zero or three, then, the running time of the algorithm can be represented as a x n + b.
+Here, the values of a and b are constants that depend on the statement costs, and the constant times are not considered in the final time complexity.
+In the worst case, the runtime required by the algorithm is a linear function of n.
+
+Let us consider another example, linear search:
+
+def linear_search(input_list, element):
+    for index, value in enumerate(input_list):
+        if value == element:
+            return index
+        
+    return -1
+input_list = [3, 4, 1, 6, 14]  
+element = 4
+print("Index position for the element x is:", linear_search(input_list,element))

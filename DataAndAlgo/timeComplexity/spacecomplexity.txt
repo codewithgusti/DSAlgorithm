@@ -1,0 +1,38 @@
+
+Space complexity
+
+
+The space complexity of the algorithm estimates the memory requirement to execute it on a computer to produce the output as a function of input data. 
+The memory space requirement of an algorithm is one of the criteria used to decide how efficient it is.
+While executing the algorithm on the computer system, storage of the input is required, along with intermediate and temporary data in data structures, which are stored in the memory of the computer. 
+In order to write a programming solution for any problem, some memory is required for storing variables, program instructions, and executing the program on the computer.
+The space complexity of an algorithm is the amount of memory required for executing and producing the result.
+
+For computing the space complexity, consider the following example,
+in which, given a list of integer values, the function returns the square value of the corresponding integer number.
+
+
+def squares(n):
+    square_numbers = []
+    for number in n:
+        square_numbers.append(number * number)
+    return square_numbers
+ 
+nums = [2, 3, 5, 8 ]
+print(squares(nums))
+
+The output of the code is:
+
+[4, 9, 25, 64]
+
+In the above code, the algorithm will require allocating memory for the number of items in the input list. 
+Say the number of elements in the input is n, then the space requirement increases with the input size, therefore, the space complexity of the algorithm becomes O(n).
+
+Given two algorithms to solve a given problem, with all other requirements being equal, then the algorithm that requires less memory can be considered more efficient.
+For example, suppose there are two search algorithms, one has O(n) and another algorithm has O(nlogn) space complexity.
+The first algorithm is the better algorithm as compared to the second with respect to the space requirements.
+Space complexity analysis is important to understand the efficiency of an algorithm, especially for applications where the memory space requirement is high.
+
+When the input size becomes large enough, the order of growth also becomes important.
+In such situations, we study the asymptotic efficiency of algorithms.
+Generally, algorithms that are asymptotically efficient are considered to be better algorithms for large-size inputs.
